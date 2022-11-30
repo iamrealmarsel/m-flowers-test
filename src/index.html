@@ -9,32 +9,42 @@
   <body>
     <main>
       <section class="main-screen">
-        <header class="main-screen__header">
-          <ul class="main-screen__nav">
-            <li class="main-screen__item">Магазины</li>
-            <li class="main-screen__item">Контакты</li>
-            <li class="main-screen__item">О нас</li>
+        <header class="header">
+          <img src="../public/img/logo.png" alt="logo" />
+          <ul class="header__nav">
+            <li class="header__item">Магазины</li>
+            <li class="header__item">Контакты</li>
+            <li class="header__item">О нас</li>
           </ul>
-          <a class="main-screen__phone" href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
-          <button class="main-screen__signin" type="button">Войти</button>
-          <button class="main-screen__signup" type="button">Создать аккаунт</button>
+          <a class="header__phone" href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
+          <div class="header__profile">
+            <button class="header__signin" type="button">Войти</button>
+            <button class="header__signup" type="button">Создать аккаунт</button>
+          </div>
         </header>
-        <h1 class="main-screen__title">
-          Мы будем рады сотрудничать с вами на платформе 'Международной цветочной онлайн-площадки'!
-        </h1>
-        <p class="main-screen__subtitle">
-          Присоединяйтесь к нам и начните получать доход с бизнеса в первый месяц регистрации!
-        </p>
-        <button class="btn" type="button">Начать покупать</button>
-        <button class="btn" type="button">Начать продавать</button>
+        <div class="main-screen__content">
+          <h1 class="main-screen__title">
+            Мы будем рады сотрудничать с вами на платформе 'Международной цветочной
+            онлайн-площадки'!
+          </h1>
+          <p class="main-screen__subtitle">
+            Присоединяйтесь к нам и начните получать доход с бизнеса в первый месяц регистрации!
+          </p>
+          <div class="main-screen__buttons">
+            <button class="btn" type="button">Начать покупать</button>
+            <button class="btn" type="button">Начать продавать</button>
+          </div>
+        </div>
       </section>
       <section class="form">
-        <h2 class="form__title">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
-        <p class="form__description">
-          Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы
-          полностью и корректно! После подтверждения регистрации вы попадёте в систему, где
-          большинство процессов автоматизированы, что сэкономит ваше время и деньги!
-        </p>
+        <div class="form__info">
+          <h2 class="form__title">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
+          <p class="form__description">
+            Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы
+            полностью и корректно! После подтверждения регистрации вы попадёте в систему, где
+            большинство процессов автоматизированы, что сэкономит ваше время и деньги!
+          </p>
+        </div>
 
         <form action="" class="form__form">
           <fieldset>
@@ -94,27 +104,37 @@
         </form>
       </section>
       <footer class="footer">
-        <div>
-          <h3 class="footer__offices">Наши офисы</h3>
-          <p>Московский офис</p>
-          <a href="tel:+7 455 267-89-07">+7 455 267-89-07</a>
-          <p>Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754</p>
-          <p>Ростовский офис</p>
-          <a href="tel:+7 878 888-01-67">+7 878 888-01-67</a>
-          <p>Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965</p>
+        <div class="footer__offices">
+          <h3 class="footer__title">Наши офисы</h3>
+          <div class="footer__offices-wrapper">
+            <div>
+              <p>Московский офис</p>
+              <a href="tel:+7 455 267-89-07">+7 455 267-89-07</a>
+              <p>Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754</p>
+            </div>
+            <div>
+              <p>Ростовский офис</p>
+              <a href="tel:+7 878 888-01-67">+7 878 888-01-67</a>
+              <p>Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965</p>
+            </div>
+          </div>
         </div>
 
         <div class="footer__socials">
-          <h3>Мы в соц сетях</h3>
-          <a href="">Instagram</a>
-          <a href="">Facebook</a>
+          <h3 class="footer__title">Мы в соц сетях</h3>
+          <div class="footer__socials-wrapper">
+            <a href="">Instagram</a>
+            <a href="">Facebook</a>
+          </div>
         </div>
 
         <div class="footer__contacts">
-          <h3>Свяжитесь с нами</h3>
-          <a href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
-          <a href="mailto:mflowers@flo.com">mflowers@flo.com</a>
-          <button type="button">Написать</button>
+          <h3 class="footer__title">Свяжитесь с нами</h3>
+          <div class="footer__contacts-wrapper">
+            <a href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
+            <a href="mailto:mflowers@flo.com">mflowers@flo.com</a>
+            <button type="button">Написать</button>
+          </div>
         </div>
       </footer>
     </main>

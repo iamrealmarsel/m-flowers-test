@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+
+  &__offices-wrapper {
+    display: flex;
+  }
+
+  &__socials-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

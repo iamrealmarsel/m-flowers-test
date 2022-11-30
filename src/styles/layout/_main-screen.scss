@@ -1,0 +1,23 @@
+.main-screen {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 15px;
+  }
+}

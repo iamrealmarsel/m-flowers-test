@@ -1,2 +1,8 @@
 @use './base/reset';
 @use './layout/body';
+@use './layout/main-screen';
+@use './layout/form';
+@use './layout/footer';
+@use './components/header';
+@use './components/button';
+@use './components/input';
