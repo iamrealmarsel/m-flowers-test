@@ -7,8 +7,116 @@
     <title>Modesto Flowers</title>
   </head>
   <body>
-    <h1>
-      Мы будем рады сотрудничать с вами на платформе 'Международной цветочной онлайн-площадки'!
-    </h1>
+    <main>
+      <section class="main-screen">
+        <header class="main-screen__header">
+          <ul class="main-screen__nav">
+            <li class="main-screen__item">Магазины</li>
+            <li class="main-screen__item">Контакты</li>
+            <li class="main-screen__item">О нас</li>
+          </ul>
+          <a class="main-screen__phone" href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
+          <button class="main-screen__signin" type="button">Войти</button>
+          <button class="main-screen__signup" type="button">Создать аккаунт</button>
+        </header>
+        <h1 class="main-screen__title">
+          Мы будем рады сотрудничать с вами на платформе 'Международной цветочной онлайн-площадки'!
+        </h1>
+        <p class="main-screen__subtitle">
+          Присоединяйтесь к нам и начните получать доход с бизнеса в первый месяц регистрации!
+        </p>
+        <button class="btn" type="button">Начать покупать</button>
+        <button class="btn" type="button">Начать продавать</button>
+      </section>
+      <section class="form">
+        <h2 class="form__title">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
+        <p class="form__description">
+          Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы
+          полностью и корректно! После подтверждения регистрации вы попадёте в систему, где
+          большинство процессов автоматизированы, что сэкономит ваше время и деньги!
+        </p>
+
+        <form action="" class="form__form">
+          <fieldset>
+            <label for="name">Ваше имя</label>
+            <input
+              class="form__name"
+              type="text"
+              id="name"
+              placeholder="Фролова Александра Васильевна"
+            />
+
+            <label for="company">Название Компании</label>
+            <input class="form__company" type="text" id="company" placeholder="ООО Атлантика" />
+
+            <label for="email">E-mail</label>
+            <input class="form__email" type="email" id="email" placeholder="flolovaalexa@com.rur" />
+
+            <label for="phone">Номер телефона</label>
+            <input class="form__phone" type="tel" id="phone" placeholder="+7 (XXX) - XXX XX XX" />
+
+            <label for="promo">Промокод</label>
+            <input class="form__promo" type="text" id="promo" placeholder="HGF864" />
+
+            <button class="btn" type="button">Далее</button>
+          </fieldset>
+
+          <fieldset>
+            <label for="password">Пароль</label>
+            <input
+              class="form__password"
+              type="password"
+              id="password"
+              placeholder="Создайте пароль"
+            />
+
+            <label for="password-confirm">Подтвердите пароль</label>
+            <input
+              class="form__password-confirm"
+              type="password"
+              id="password-confirm"
+              placeholder="Повторите пароль"
+            />
+
+            <!-- <div>символы из картинки</div> -->
+
+            <label for="code">Введите символы из картинки</label>
+            <input class="form__code" type="text" id="code" placeholder="Код из картинки" />
+
+            <button class="btn" type="button">Назад</button>
+            <button class="btn" type="submit">Подтвердить</button>
+
+            <label class="form__personal">
+              <input type="checkbox" />
+              Я даю согласие на обработку моих персональных данных и правовых документов
+            </label>
+          </fieldset>
+        </form>
+      </section>
+      <footer class="footer">
+        <div>
+          <h3 class="footer__offices">Наши офисы</h3>
+          <p>Московский офис</p>
+          <a href="tel:+7 455 267-89-07">+7 455 267-89-07</a>
+          <p>Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754</p>
+          <p>Ростовский офис</p>
+          <a href="tel:+7 878 888-01-67">+7 878 888-01-67</a>
+          <p>Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965</p>
+        </div>
+
+        <div class="footer__socials">
+          <h3>Мы в соц сетях</h3>
+          <a href="">Instagram</a>
+          <a href="">Facebook</a>
+        </div>
+
+        <div class="footer__contacts">
+          <h3>Свяжитесь с нами</h3>
+          <a href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
+          <a href="mailto:mflowers@flo.com">mflowers@flo.com</a>
+          <button type="button">Написать</button>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
