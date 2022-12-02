@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+
+.btn {
+  @include typo-content(18px, 600, 1.2);
+  padding: 22px 34px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffe182;
+  cursor: pointer;
+
+  &_gray {
+    background-color: #ededed;
+  }
+
+  &_outline {
+    padding: 14px 30px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background-color: transparent;
+    font-weight: 500;
+  }
+
+  &_empty {
+    padding: 14px 30px;
+    background-color: transparent;
+    font-weight: 500;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}

@@ -1,15 +1,132 @@
+@use '../abstracts/mixins' as *;
+
 .form {
-  display: flex;
-  column-gap: 80px;
-  padding: 80px;
+  padding: 200px 0;
+  background-image: url(../../public/img/bg-form.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    column-gap: 80px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #fffbed;
+    background-image: url(../../public/img/bg-form-content.jpg);
+    background-size: cover;
+  }
+
+  &__title {
+    @include typo-title(36px);
+    margin-bottom: 40px;
+  }
 
   &__form {
-    label {
-      // display: block;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  &__fieldset {
+    //
+  }
+
+  &__label {
+    @include typo-content(14px, 500, 1.2);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    display: block;
+  }
+
+  &__btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 9px;
+    margin-bottom: 20px;
+
+    .btn:first-child {
+      width: 60%;
+    }
+  }
+
+  &__personal {
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+
+    .checkbox {
+      flex-shrink: 0;
+      margin-right: 10px;
     }
 
-    input {
+    input[type='checkbox'] {
+      display: none;
+
+      &:checked + .checkbox > svg {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding: 40px 0;
+
+    &__description {
+      margin-bottom: 58px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      padding: 32px;
+
+      background-image: none;
+    }
+
+    &__form {
+      max-width: none;
+    }
+
+    &__fieldset {
+      column-count: 2;
+      column-gap: 40px;
+    }
+
+    &__field_captcha {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        order: 10;
+      }
+    }
+
+    &__btn {
+      margin-top: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__fieldset {
+      column-count: auto;
+    }
+
+    &__field_captcha {
       display: block;
+    }
+
+    &__title {
+      font-size: 24px;
     }
   }
 }

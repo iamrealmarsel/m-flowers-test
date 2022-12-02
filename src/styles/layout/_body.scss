@@ -1,5 +1,6 @@
 @use '../abstracts/consts' as *;
 
 body {
+  min-width: 360px;
   background-color: $color;
 }
