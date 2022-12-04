@@ -33,10 +33,14 @@
   }
 
   @media (max-width: 1000px) {
+    background-image: url('../../public/img/bg-tablet.png');
+    background-position: calc(50% - 30px) calc(50% + 110px);
     padding-bottom: 210px;
   }
 
   @media (max-width: 767px) {
+    background-image: url('../../public/img/bg-mob.png');
+    background-position: calc(50% - 30px) calc(50% + 30px);
     padding-bottom: 150px;
 
     &__title {
@@ -45,6 +49,11 @@
 
     &__subtitle {
       font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__buttons {
+      column-gap: 8px;
     }
   }
 }

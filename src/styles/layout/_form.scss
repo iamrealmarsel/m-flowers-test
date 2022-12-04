@@ -28,16 +28,30 @@
     flex-shrink: 0;
     width: 100%;
     max-width: 320px;
+    line-height: 1;
   }
 
-  &__fieldset {
-    //
+  &__field {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__field_captcha {
+    margin-bottom: 40px;
+  }
+
+  &__captcha {
+    margin-bottom: 20px;
   }
 
   &__label {
     @include typo-content(14px, 500, 1.2);
     display: inline-block;
     margin-bottom: 10px;
+    line-height: 1.2;
   }
 
   &__input {
@@ -64,6 +78,7 @@
     display: flex;
     cursor: pointer;
     font-size: 14px;
+    line-height: 1.4;
 
     .checkbox {
       flex-shrink: 0;
@@ -80,7 +95,7 @@
   }
 
   @media (max-width: 1000px) {
-    padding: 40px 0;
+    padding: 40px 20px;
 
     &__description {
       margin-bottom: 58px;
@@ -89,7 +104,6 @@
     &__wrapper {
       flex-direction: column;
       padding: 32px;
-
       background-image: none;
     }
 
@@ -102,13 +116,22 @@
       column-gap: 40px;
     }
 
+    &__field {
+      // margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 45px;
+      }
+    }
+
     &__field_captcha {
       display: flex;
       flex-direction: column;
+    }
 
-      img {
-        order: 10;
-      }
+    &__captcha {
+      order: 10;
+      margin-bottom: auto;
     }
 
     &__btn {
@@ -117,12 +140,30 @@
   }
 
   @media (max-width: 767px) {
+    padding: 20px 0;
+
+    &__wrapper {
+      padding: 20px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__description {
+      margin-bottom: 32px;
+    }
+
     &__fieldset {
       column-count: auto;
     }
 
     &__field_captcha {
       display: block;
+    }
+
+    &__captcha {
+      margin-bottom: 20px;
     }
 
     &__title {

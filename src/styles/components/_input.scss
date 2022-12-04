@@ -7,6 +7,11 @@
   border: none;
   border-radius: 6px;
   background: #fff8e1;
+
+  &:focus-visible,
+  &:focus {
+    outline: #ffe182 solid 2px;
+  }
 }
 
 .checkbox {

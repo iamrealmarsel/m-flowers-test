@@ -28,13 +28,15 @@
                 <a class="header__phone-link" href="tel:+3 67 8754 7894">+3 67 8754 7894</a>
               </div>
               <div class="header__lang">
-                <span class="header__ru _active">Ru</span>
-                <span class="header__eng">Eng</span>
+                <a href="#" class="header__ru _active">Ru</a>
+                <a href="#" class="header__eng">Eng</a>
               </div>
               <button class="header__signin btn btn_empty" type="button">Войти</button>
               <button class="header__signup btn btn_outline" type="button">Создать аккаунт</button>
 
-              <span class="header__burger js-burger"><i></i></span>
+              <div class="header__burger js-burger">
+                <div class="header__burger-lines"><i></i></div>
+              </div>
             </div>
             <div class="header__nav-mob js-menu">
               <button class="header__signup-mob btn btn_outline" type="button">
@@ -80,10 +82,8 @@
                 большинство процессов автоматизированы, что сэкономит ваше время и деньги!
               </p>
             </div>
-
             <form action="" class="form__form">
-              <fieldset class="form__fieldset">
-                <!-- <div class="form__col"> -->
+              <fieldset class="form__fieldset" style="display: none">
                 <div class="form__field">
                   <label class="form__label" for="name">Ваше имя</label>
                   <input
@@ -111,9 +111,6 @@
                     placeholder="flolovaalexa@com.rur"
                   />
                 </div>
-                <!-- </div> -->
-
-                <!-- <div class="form__col"> -->
                 <div class="form__field">
                   <label class="form__label" for="phone">Номер телефона</label>
                   <input
@@ -127,18 +124,9 @@
                   <label class="form__label" for="promo">Промокод</label>
                   <input class="form__input inp" type="text" id="promo" placeholder="HGF864" />
                 </div>
-
                 <button class="form__btn btn" type="button">Далее</button>
-                <!-- </div> -->
               </fieldset>
-
-              <!-- <fieldset class="form__fieldset" style="display: none"> -->
               <fieldset class="form__fieldset">
-                <!-- <div class="form__row">
-                  <div class="form__col"></div>
-                  <div class="form__col"></div>
-                </div> -->
-
                 <div class="form__field">
                   <label class="form__label" for="password">Пароль</label>
                   <input
@@ -157,10 +145,10 @@
                     placeholder="Повторите пароль"
                   />
                 </div>
-                <!-- <div class="form__field"> -->
-                <!-- </div> -->
                 <div class="form__field form__field_captcha">
-                  <img src="../public/img/captcha.png" alt="captcha" />
+                  <div class="form__captcha">
+                    <img src="../public/img/captcha.png" alt="captcha" />
+                  </div>
                   <label class="form__label" for="code">Введите символы из картинки</label>
                   <input
                     class="form__input inp"
@@ -169,32 +157,30 @@
                     placeholder="Код из картинки"
                   />
                 </div>
-                <div class="form__field">
-                  <div class="form__buttons">
-                    <button class="form__btn btn btn_gray" type="button">Назад</button>
-                    <button class="form__btn btn" type="submit">Подтвердить</button>
-                  </div>
-                  <label class="form__personal">
-                    <input type="checkbox" />
-                    <span class="checkbox">
-                      <svg
-                        width="11"
-                        height="8"
-                        viewBox="0 0 11 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M10.2336 0.183058C10.4777 0.427136 10.4777 0.822864 10.2336 1.06694L4.40028 6.90027C4.1562 7.14435 3.76047 7.14435 3.51639 6.90027L0.183058 3.56694C-0.0610194 3.32286 -0.0610194 2.92714 0.183058 2.68306C0.427136 2.43898 0.822864 2.43898 1.06694 2.68306L3.95833 5.57445L9.34973 0.183058C9.5938 -0.0610194 9.98953 -0.0610194 10.2336 0.183058Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                    Я даю согласие на обработку моих персональных данных и правовых документов
-                  </label>
+                <div class="form__buttons">
+                  <button class="form__btn btn btn_gray" type="button">Назад</button>
+                  <button class="form__btn btn" type="submit">Подтвердить</button>
                 </div>
+                <label class="form__personal">
+                  <input type="checkbox" />
+                  <span class="checkbox">
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10.2336 0.183058C10.4777 0.427136 10.4777 0.822864 10.2336 1.06694L4.40028 6.90027C4.1562 7.14435 3.76047 7.14435 3.51639 6.90027L0.183058 3.56694C-0.0610194 3.32286 -0.0610194 2.92714 0.183058 2.68306C0.427136 2.43898 0.822864 2.43898 1.06694 2.68306L3.95833 5.57445L9.34973 0.183058C9.5938 -0.0610194 9.98953 -0.0610194 10.2336 0.183058Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  Я даю согласие на обработку моих персональных данных и правовых документов
+                </label>
               </fieldset>
             </form>
           </div>
@@ -217,7 +203,6 @@
               </div>
             </div>
           </div>
-
           <div class="footer__socials">
             <h3 class="footer__title">Мы в соц сетях</h3>
             <div class="footer__socials-wrapper">
@@ -225,7 +210,6 @@
               <a href="#">Facebook</a>
             </div>
           </div>
-
           <div class="footer__contacts">
             <h3 class="footer__title">Свяжитесь с нами</h3>
             <div class="footer__contacts-wrapper">
