@@ -84,7 +84,6 @@
       visibility: hidden;
       opacity: 0;
       cursor: url(../../public/img/cross.svg) 25 20, pointer;
-      // cursor: cell;
       transition: opacity 0.3s;
 
       &._active {
