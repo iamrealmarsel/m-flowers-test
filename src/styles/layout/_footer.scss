@@ -6,11 +6,6 @@
   color: $main_light;
   background-color: $main_dark;
 
-  a {
-    color: $main_light;
-    text-decoration: none;
-  }
-
   &__container {
     display: flex;
     justify-content: space-between;
@@ -20,6 +15,14 @@
   &__socials,
   &__contacts {
     flex-shrink: 0;
+  }
+
+  &__socials,
+  &__offices {
+    a {
+      color: $main_light;
+      text-decoration: none;
+    }
   }
 
   &__offices-wrapper {
@@ -53,12 +56,16 @@
   &__phone {
     @include typo-phone();
     margin-bottom: 15px;
+    color: $main_light;
+    text-decoration: none;
   }
 
   &__email {
     color: $main_dark;
     text-decoration: none;
     margin-bottom: 15px;
+    color: $main_light;
+    text-decoration: none;
   }
 
   &__instagram {

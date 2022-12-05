@@ -1,17 +1,31 @@
 import './styles/main.scss';
 
-console.log('hello, world !');
+console.log('Hello, Modesto Flowers !');
 
-const burger = document.querySelector('.js-burger') as HTMLElement;
-const menu = document.querySelector('.js-menu') as HTMLElement;
-const overlay = document.querySelector('.js-overlay') as HTMLElement;
+const burgerElement = document.querySelector('.js-burger') as HTMLElement;
+const menuElement = document.querySelector('.js-menu') as HTMLElement;
+const overlayElement = document.querySelector('.js-overlay') as HTMLElement;
+const form1Element = document.querySelector('.js-form-1') as HTMLElement;
+const form2Element = document.querySelector('.js-form-2') as HTMLElement;
+const nextElement = form1Element.querySelector('.js-form-next') as HTMLElement;
+const backElement = form2Element.querySelector('.js-form-back') as HTMLElement;
 
-burger.addEventListener('click', () => {
-  menu.classList.add('_active');
-  overlay.classList.add('_active');
+nextElement.addEventListener('click', () => {
+  form1Element.style.display = 'none';
+  form2Element.style.display = 'block';
 });
 
-overlay.addEventListener('click', () => {
-  menu.classList.remove('_active');
-  overlay.classList.remove('_active');
+backElement.addEventListener('click', () => {
+  form1Element.style.display = 'block';
+  form2Element.style.display = 'none';
+});
+
+burgerElement.addEventListener('click', () => {
+  menuElement.classList.add('_active');
+  overlayElement.classList.add('_active');
+});
+
+overlayElement.addEventListener('click', () => {
+  menuElement.classList.remove('_active');
+  overlayElement.classList.remove('_active');
 });
