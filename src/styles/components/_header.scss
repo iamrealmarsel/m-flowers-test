@@ -1,4 +1,5 @@
 @use '../abstracts/mixins' as *;
+@use '../abstracts/consts' as *;
 
 .header {
   display: flex;
@@ -11,7 +12,7 @@
   &__item-link {
     @include typo-content(18px, 400, 1.4);
     text-decoration: none;
-    color: #000;
+    color: $main_dark;
   }
 
   &__nav {
@@ -79,9 +80,11 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.204);
+      background-color: rgba(0, 0, 0, 0.2);
       visibility: hidden;
       opacity: 0;
+      cursor: url(../../public/img/cross.svg) 25 20, pointer;
+      // cursor: cell;
       transition: opacity 0.3s;
 
       &._active {
@@ -96,8 +99,8 @@
       top: 0;
       bottom: 0;
       right: 0;
-      padding: 30px 15px 15px;
-      background-color: #fffbec;
+      padding: 30px;
+      background-color: $main_light;
       transform: translateX(100%);
       transition: transform 0.3s;
 
@@ -120,12 +123,12 @@
 
     &__ru,
     &__eng {
-      color: #9b9b99;
+      color: $gray_dark;
       text-decoration: none;
     }
 
     &__ru._active {
-      color: #000;
+      color: $main_dark;
     }
 
     &__burger {
@@ -149,8 +152,6 @@
       position: relative;
       width: 100%;
       height: 100%;
-      // width: 30px;
-      // height: 18px;
 
       i {
         position: absolute;
@@ -159,7 +160,7 @@
         width: 70%;
         transform: translateY(-50%);
         height: 2px;
-        background-color: #000;
+        background-color: $main_dark;
         transition: width 0.15s;
       }
 
@@ -170,7 +171,7 @@
         top: 0;
         width: 100%;
         height: 2px;
-        background-color: #000;
+        background-color: $main_dark;
         transition: width 0.15s;
       }
 
@@ -181,7 +182,7 @@
         bottom: 0;
         width: 40%;
         height: 2px;
-        background-color: #000;
+        background-color: $main_dark;
         transition: width 0.15s;
       }
     }

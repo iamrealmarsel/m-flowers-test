@@ -1,3 +1,5 @@
+@use './consts' as *;
+
 @mixin typo-title($size) {
   font-family: 'Marmelad', Tahoma, Geneva, Verdana, sans-serif;
   font-size: $size;
@@ -16,7 +18,7 @@
   font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #372e11;
+  color: $main_dark;
   text-decoration: none;
 
   @media (max-width: 767px) {
